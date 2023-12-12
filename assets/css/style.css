@@ -47,20 +47,19 @@ body > *{
 /*asigning grif areas*/
 .header {
   grid-area: header;
-  
+  background-color: orange;  
+  text-align: end;
 }
 
 .nav {
   grid-area: nav;
   position: relative;
+  text-align: end;
 }
 
 .nav a {
-  position:relative;
-  width: 250px;
   border: 3px; border-color: orange; border-style: none none solid none;
-  padding: 10px;
-  
+  padding: 15px;
 }
 
 .hero {
@@ -72,10 +71,15 @@ body > *{
 
 .hero div {
   text-align: end;
-  color: red;
   position:absolute;
   bottom:0;
-  right:0;    
+  right:0; 
+  background-color: orange; 
+  height: 50px;
+  width: auto;  
+  text-align: center;
+  opacity: 0.7;  
+  margin-bottom: 10px;
 }
 
 .main {
@@ -88,6 +92,8 @@ body > *{
 }
 
 .main > *{
+  margin: 0px;
+  padding: 10px;
 }
 
 .page-section {
@@ -101,6 +107,7 @@ footer {
   grid-area: footer;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  position: relative;
 }
 
 .pics {
@@ -110,17 +117,26 @@ footer {
   grid-template-areas: 
     "img1 img1"
     "img2 img3"
-    "img4 img5";
-    grid-gap: 20px;
-    justify-content: space-around;
-}
+    "img4 img5";  
+  grid-gap: 10px;  
+  }
 
 .pics >* {
   border: 4px; border-color: orange; border-style: solid;
   height: 250px;
   width: auto;
   background-size: cover;
-  justify-content: space-around
+  position: relative;
+
+}
+
+#picText {
+  background-color: orange;
+  opacity: 0.7; 
+}
+
+#picText > * {
+  margin: 10px;  
 }
 
 #img1 {
@@ -137,25 +153,35 @@ footer {
 
 #img3 {
   grid-area: img3;
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio-2.jpg);
 }
 
 #img4 {
   grid-area: img4;
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-portfolio-3.jpg);
 }
 
 #img5 {
   grid-area: img5;
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/02-run-buddy.jpg);
 }
 
 footer h2 {
   border-right: 5px; border-color: orange; border-style: none solid none none;
+  text-align: end;
+  padding: 10px;
 }
 
 footer button {
-  
+  height: 50px;
+  width: 250px;
+  padding: 15px;
+  border: 3px solid orange;
+  margin: 0;
+  position: relative;
+  top: 5%;
+  left: 15%;
+
 }
 
 @media (max-width: 800px) {
