@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* header with 2 columns, navi and name*/
+header {
+width: 100%;
+display: grid; 
+  grid-template-rows: 75px;
+  grid-template-columns: 20% 80%;
+  grid-template: 
+  "a b";
+  /*border: 2px;
+  border-style: solid;
+  border-color: black;*/
+}
+
+#name {
+  grid-area: a;
+
+}
+
+#navi {
+  grid-area: b;
+}
+
+
+#hero {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 100%;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+main {
+  /*display: grid;
+  width: 100%; 
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template: 
+  "a b";
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+*/
+}
+.page-wrapper {
+    display: grid; 
+    /*grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;*/
+    grid-template: 1fr minmax(75px,auto) / 1fr 2fr; 
+    grid-gap: 5px;
+}
+
+#about {
+/*grid-column-start: 1;
+grid-column-end: 2;*/
+grid-column: 1/2;
+grid-row: 1/2;
+background-color: yellowgreen;
+}
+
+.aboutText {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-color: pink;
+}
+
+#work {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.workText {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: red;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template: "a b c d";
+  width: 100%;
+  height: 75px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+#contact div {
+
+}
+
+#contactme {
+  grid-area: a;
+}
+
+#instagram {
+  grid-area: b;
+}
+
+#twitter {
+  grid-area: c;
+}
+
+#github {
+  grid-area: d;
+}
